@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Recap Script </title>
+    <SCRIPT src="./wk6.js"> </SCRIPT>
+    <link rel = "stylesheet" href = "./externalCSS.css">
+</head>
+<body>
+
+    <div id = "results"> </div>
+</body>
+    <script>
+        var nbTotalTests = 3;
+        var nbPassedTests = 0;
+        var nbFailedTests = 0;
+
+        console.log("Starting the Tests");
+
+        var addResult = addNumbers(1, 2);
+        if (addResult == 3) {
+            nbPassedTests = nbPassedTests + 1;
+            console.log("ADD Test Passed");
+
+        } else {
+            nbFailedTests = nbFailedTests + 1;
+            console.log("ADD Test Failed");
+
+
+        }
+        var subResult = subtractNumbers(1, 2);
+        if (subResult == -1) {
+            nbPassedTests = nbPassedTests + 1;
+            console.log("SUB Test Passed");
+
+        } else {
+            nbFailedTests = nbFailedTests + 1;
+            console.log("SUB Test Failed");
+
+        }
+        var mulResult = multiplytNumbers(2, 5);
+        if (mulResult == 10) {
+            nbPassedTests = nbPassedTests + 1;
+            console.log("MUL Test Passed");
+
+        } else {
+            nbFailedTests = nbFailedTests + 1;
+            console.log("MUL Test Failed");
+
+        }
+        console.log("Tests Complete")
+        message = "Nb Tests Passed: " + nbPassedTests + "Nb Test Failed: " + nbFailedTests;
+        console.log(message);
+        alert (message);
+        //document.write(message);
+        document.getElementById("results").innerHTML = message;
+
+    </script>
+
+
+</html>
